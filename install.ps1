@@ -2,8 +2,20 @@ $caller = pwd
 cd "$PSScriptRoot\files"
 
 # install scoop
-irm get.scoop.sh | iex
-scoop install zenhan
+try {
+    if (Get-Command scoop) {
+    }
+}
+catch {
+    irm get.scoop.sh | iex
+}
+try {
+    if (Get-Command zenhan) {
+    }
+}
+catch {
+    scoop install zenhan
+}
 
 # dbcli pgcli
 cp -Force `

@@ -24,3 +24,5 @@ nnoremap S "_S
 nmap <C-O> :vsc View.NavigateBackward<CR>
 nmap <C-I> :vsc View.NavigateForward<CR>
 nmap <C-]> :vsc Edit.GoToDefinition<CR>
+nmap <S-H> :vsc Window.NextDocumentWindow<CR>
+nmap <S-L> :vsc Window.PreviousDocumentWindow<CR>
