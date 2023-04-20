@@ -1,8 +1,42 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": 
-    [
+    "actions": [
+        {
+            "command": {
+                "action": "sendInput",
+                "input": "\u001b[H"
+            },
+            "keys": "ctrl+a"
+        },
+        {
+            "command": {
+                "action": "sendInput",
+                "input": "\u001b[C"
+            },
+            "keys": "ctrl+f"
+        },
+        {
+            "command": {
+                "action": "sendInput",
+                "input": "\u001b[D"
+            },
+            "keys": "ctrl+b"
+        },
+        {
+            "command": {
+                "action": "sendInput",
+                "input": "\u001b[S"
+            },
+            "keys": "ctrl+d"
+        },
+        {
+            "command": {
+                "action": "sendInput",
+                "input": "\u001b[T"
+            },
+            "keys": "ctrl+u"
+        },
         {
             "command": "openTabRenamer",
             "keys": "ctrl+shift+r"
@@ -12,16 +46,14 @@
             "keys": "ctrl+shift+f"
         },
         {
-            "command": 
-            {
+            "command": {
                 "action": "copy",
                 "singleLine": false
             },
             "keys": "ctrl+shift+insert"
         },
         {
-            "command": 
-            {
+            "command": {
                 "action": "prevTab"
             },
             "keys": "ctrl+pgup"
@@ -39,15 +71,13 @@
             "keys": "alt+f4"
         },
         {
-            "command": 
-            {
+            "command": {
                 "action": "nextTab"
             },
             "keys": "ctrl+pgdn"
         },
         {
-            "command": 
-            {
+            "command": {
                 "action": "closeTab"
             },
             "keys": "ctrl+shift+w"
@@ -62,20 +92,16 @@
     "defaultProfile": "{a863c320-524f-4d64-bc2f-914ace0d4db1}",
     "language": "en-US",
     "launchMode": "default",
-    "profiles": 
-    {
-        "defaults": 
-        {
-            "font": 
-            {
+    "profiles": {
+        "defaults": {
+            "font": {
                 "face": "HackGen Console",
                 "size": 12.0
             },
             "opacity": 50,
             "useAcrylic": false
         },
-        "list": 
-        [
+        "list": [
             {
                 "colorScheme": "Campbell",
                 "commandline": "\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\"",
@@ -116,8 +142,7 @@
             }
         ]
     },
-    "schemes": 
-    [
+    "schemes": [
         {
             "background": "#0C0C0C",
             "black": "#0C0C0C",
