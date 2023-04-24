@@ -68,4 +68,7 @@ CreateSymLink -File ".\vim\_vimrc" -Dest $env:USERPROFILE
 # vrapper
 CreateSymLink -File ".\vrapper\_vrapperrc" -Dest $env:USERPROFILE 
 
+# vsvim
+CreateSymLink -File ".\vsvim\_vsvimrc" -Dest $env:USERPROFILE 
+
 Pause

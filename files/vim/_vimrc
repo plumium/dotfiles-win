@@ -8,6 +8,7 @@ set showmatch
 set scrolloff=5
 
 set ignorecase
+set smartcase
 set hlsearch
 set incsearch
 
@@ -20,6 +21,8 @@ set expandtab
 set tabstop=4
 set shiftwidth=0
 
+set clipboard=unnamed
+
 syntax enable
 
 let &t_SI .= "\<Esc>[5 q"
@@ -31,11 +34,10 @@ nnoremap <silent> <Space><Space> :let @/ = '\<' . expand('<cword>') . '\>'<CR>:s
 nnoremap <silent> <Space>r :reg<CR>
 nnoremap <silent> <Space>m :marks<CR>
 nnoremap <silent> <Space>t :tags<CR>
-nnoremap <silent> <Space>w :w<CR>
-nnoremap <silent> <Space>q :q<CR>
 nnoremap x "_x
 nnoremap X "_X
 nnoremap s "_s
 nnoremap S "_S
+nnoremap c "_c
 
 nmap <C-h> <Space><Space>:%s/<C-r>///g<Left><Left>

@@ -1,9 +1,12 @@
 set number
+set cursorline
 set scrolloff=5
 
 set ignorecase
 set hlsearch
 set incsearch
+
+set clipboard=unnamed
 
 set expandtab
 set tabstop=4
@@ -16,13 +19,18 @@ nnoremap <silent> <Space>b :buffers<CR>
 nnoremap <silent> <Space>t :tags<CR>
 nnoremap <silent> <Space>w :w<CR>
 nnoremap <silent> <Space>q :q<CR>
+nnoremap <S-H> <C-Pageup>
+nnoremap <S-L> <C-Pagedown>
 nnoremap x "_x
 nnoremap X "_X
 nnoremap s "_s
 nnoremap S "_S
+nnoremap c "_c
 
+nmap = :vsc Edit.FormatDocument<CR>
+nmap [ :vsc Edit.NextMethod<CR>
+nmap ] :vsc Edit.PreviousMethod<CR>
+nmap <C-F> :vsc AddQuickFile<CR>
 nmap <C-O> :vsc View.NavigateBackward<CR>
 nmap <C-I> :vsc View.NavigateForward<CR>
 nmap <C-]> :vsc Edit.GoToDefinition<CR>
-nmap <S-H> :vsc Window.NextDocumentWindow<CR>
-nmap <S-L> :vsc Window.PreviousDocumentWindow<CR>

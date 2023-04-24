@@ -31,8 +31,6 @@ nnoremap <silent> <Space><Space> :let @/ = '\<' . expand('<cword>') . '\>'<CR>:s
 nnoremap <silent> <Space>r :reg<CR>
 nnoremap <silent> <Space>m :marks<CR>
 nnoremap <silent> <Space>t :tags<CR>
-nnoremap <silent> <Space>w :w<CR>
-nnoremap <silent> <Space>q :q<CR>
 nnoremap x "_x
 nnoremap s "_s
 

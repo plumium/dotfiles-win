@@ -10,7 +10,6 @@ set tabstop=4
 set shiftwidth=0
 set expandtab
 
-
 set clipboard=unnamed
 
 # vrapper
@@ -18,16 +17,22 @@ set contentassistmode
 set startnormalmode
 set imdisable
 
-nmap <C-[><C-[> :noh<Enter>
-nmap <S-h> :tabprevious<Enter>
-nmap <S-l> :tabnext<Enter>
-nmap <Space>w :w<Enter>
-nmap <Space>q :q<Enter>
-nmap <Space>r :reg<Enter>
-nmap <Space>m :marks<Enter>
-nmap <Space>b :buffers<Enter>
-nmap <Space>e :files<Enter>
+nmap <C-[><C-[> :noh<CR>
+nmap <Space>r :reg<CR>
+nmap <Space>m :marks<CR>
+nmap <Space>b :buffers<CR>
 nnoremap x "_x
 nnoremap X "_X
 nnoremap s "_s
 nnoremap S "_S
+nnoremap c "_c
+nnoremap = :format<CR>
+
+nnoremap ]] :GotoNextMember<CR>
+nnoremap [[ :GotoPreviousMember<CR>
+
+# eclipse actions
+# https://git.eclipse.org/r/plugins/gitiles/jdt/eclipse.jdt.ui/+/89ea2c6596fdcfa355e79600261b224a899708ac/org.eclipse.jdt.ui/ui/org/eclipse/jdt/ui/actions/IJavaEditorActionDefinitionIds.java
+
+eclipseaction GotoNextMember org.eclipse.jdt.ui.edit.text.java.goto.next.member
+eclipseaction GotoPreviousMember org.eclipse.jdt.ui.edit.text.java.goto.previous.member

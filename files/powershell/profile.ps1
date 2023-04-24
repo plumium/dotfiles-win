@@ -1,6 +1,7 @@
 
 # alias
 Set-Alias vi 'C:\Program Files\Vim\vim90\vim.exe'
+Set-Alias eclipse 'C:\Program Files\Eclipse Foundation\2023-03-jee\eclipse\eclipse.exe'
 
 function Prompt {
     Write-Host "${env:USERNAME}@${env:COMPUTERNAME} " -NoNewLine -ForegroundColor "Cyan"
