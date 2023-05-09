@@ -3,41 +3,6 @@
     "$schema": "https://aka.ms/terminal-profiles-schema",
     "actions": [
         {
-            "command": {
-                "action": "sendInput",
-                "input": "\u001b[H"
-            },
-            "keys": "ctrl+a"
-        },
-        {
-            "command": {
-                "action": "sendInput",
-                "input": "\u001b[C"
-            },
-            "keys": "ctrl+f"
-        },
-        {
-            "command": {
-                "action": "sendInput",
-                "input": "\u001b[D"
-            },
-            "keys": "ctrl+b"
-        },
-        {
-            "command": {
-                "action": "sendInput",
-                "input": "\u001b[S"
-            },
-            "keys": "ctrl+d"
-        },
-        {
-            "command": {
-                "action": "sendInput",
-                "input": "\u001b[T"
-            },
-            "keys": "ctrl+u"
-        },
-        {
             "command": "openTabRenamer",
             "keys": "ctrl+shift+r"
         },
@@ -92,19 +57,10 @@
     "defaultProfile": "{a863c320-524f-4d64-bc2f-914ace0d4db1}",
     "language": "en-US",
     "launchMode": "default",
-<<<<<<< HEAD
-    "profiles": 
-    {
-        "defaults": 
-        {
-            "colorScheme": "Solarized Dark",
-            "font": 
-            {
-=======
     "profiles": {
         "defaults": {
+            "colorScheme": "Solarized Dark",
             "font": {
->>>>>>> 43e6403c57b54bb2b54cc3219b4f1d8b60becb76
                 "face": "HackGen Console",
                 "size": 12.0
             },

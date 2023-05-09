@@ -8,6 +8,20 @@ function Prompt {
     Write-Host $pwd -NoNewLine -ForegroundColor "DarkCyan"
     return ">"
 }
+function OnViModeChange {
+    if ($args[0] -eq 'Command') {
+        # Set the cursor to a blinking block.
+        Write-Host -NoNewLine "`e[1 q"
+    }
+    else {
+        # Set the cursor to a blinking line.
+        Write-Host -NoNewLine "`e[5 q"
+    }
+}
+Set-PSReadLineOption `
+    -PredictionViewStyle ListView `
+    -EditMode Vi `
+    -ViModeIndicator Script -ViModeChangeHandler $Function:OnViModeChange
 
 # function
 function GenerateMavenProject {
@@ -20,11 +34,11 @@ function GenerateMavenProject {
     }
 }
 
-function OpenEclipseWorkspace{
+function OpenEclipseWorkspace {
     param(
         [parameter(ValueFromPipeline)]$Path
     )
-    if(-not(Test-Path "$Path\.metadata")){
+    if (-not(Test-Path "$Path\.metadata")) {
         Write-Host "workspace not found"
         return
     }
