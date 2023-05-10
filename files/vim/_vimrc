@@ -3,6 +3,7 @@ set encoding=utf-8
 set number
 set cursorline
 highlight clear CursorLine
+
 set showcmd
 set showmatch
 set scrolloff=5
@@ -21,8 +22,6 @@ set expandtab
 set tabstop=4
 set shiftwidth=0
 
-set clipboard=unnamed
-
 syntax enable
 
 let &t_SI .= "\<Esc>[5 q"
@@ -38,6 +37,5 @@ nnoremap x "_x
 nnoremap X "_X
 nnoremap s "_s
 nnoremap S "_S
-nnoremap c "_c
 
 nmap <C-h> <Space><Space>:%s/<C-r>///g<Left><Left>

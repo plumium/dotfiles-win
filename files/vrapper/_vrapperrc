@@ -10,8 +10,6 @@ set tabstop=4
 set shiftwidth=0
 set expandtab
 
-set clipboard=unnamed
-
 # vrapper
 set contentassistmode
 set startnormalmode
@@ -25,7 +23,6 @@ nnoremap x "_x
 nnoremap X "_X
 nnoremap s "_s
 nnoremap S "_S
-nnoremap c "_c
 nnoremap = :format<CR>
 
 nnoremap ]] :GotoNextMember<CR>
