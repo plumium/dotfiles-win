@@ -24,7 +24,7 @@ Set-PSReadLineOption `
     -ViModeIndicator Script -ViModeChangeHandler $Function:OnViModeChange
 
 # function
-function GenerateMavenProject {
+function MvnArchetypeGenerate {
     [CmdletBinding()]
     param(
         [parameter(ValueFromPipeline)]$Scope
@@ -34,7 +34,7 @@ function GenerateMavenProject {
     }
 }
 
-function OpenEclipseWorkspace {
+function EclipseOpenWorkspace {
     param(
         [parameter(ValueFromPipeline)]$Path
     )
