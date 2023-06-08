@@ -71,4 +71,7 @@ CreateSymLink -File ".\vrapper\_vrapperrc" -Dest $env:USERPROFILE
 # vsvim
 CreateSymLink -File ".\vsvim\_vsvimrc" -Dest $env:USERPROFILE 
 
+# eclipse
+CreateSymLink -File ".\eclipse\formatter.xml" -Dest $env:USERPROFILE 
+
 Pause
