@@ -45,10 +45,3 @@ function EclipseOpenWorkspace {
     Invoke-Expression "eclipse -data ${Path}"
 }
 
-function DockerRemoveExitedProcess {
-    Invoke-Expression 'docker ps -qf status=exited | % {docker rm $_}'
-}
-
-function DockerListImageTemplate {
-    Invoke-Expression "docker images --format '{{.Repository}}:{{.Tag}}'"
-}
