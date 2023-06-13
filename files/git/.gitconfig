@@ -3,4 +3,4 @@
     co = checkout
 
 [core]
-	autocrlf = input
+    autocrlf = true
