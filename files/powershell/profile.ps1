@@ -24,6 +24,11 @@ Set-PSReadLineOption `
     -ViModeIndicator Script -ViModeChangeHandler $Function:OnViModeChange
 
 # function
+function Which($name) {
+    Get-Command $name -ErrorAction SilentlyContinue
+    | % { $_.Source.ToString() }
+}
+
 function MvnArchetypeGenerate {
     [CmdletBinding()]
     param(
