@@ -8,7 +8,7 @@ Set-PSReadLineOption `
 
 function Prompt {
     Write-Host "${env:USERNAME}@${env:COMPUTERNAME} " -NoNewLine -ForegroundColor "Cyan"
-    Write-Host $pwd -NoNewLine -ForegroundColor "DarkCyan"
+    Write-Host "$pwd`e[5 q" -NoNewLine -ForegroundColor "DarkCyan"
     return ">"
 }
 
