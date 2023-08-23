@@ -7,12 +7,13 @@ Set-PSReadLineOption `
     -PredictionViewStyle ListView `
 
 function Prompt {
-    Write-Host "${env:USERNAME}@${env:COMPUTERNAME} " -NoNewLine -ForegroundColor "Cyan"
-    Write-Host "$pwd`e[5 q" -NoNewLine -ForegroundColor "DarkCyan"
+    Write-Host "${env:USERNAME}@${env:COMPUTERNAME} " -NoNewLine -ForegroundColor Cyan
+    Write-Host "$pwd`e[5 q" -NoNewLine -ForegroundColor DarkCyan
+    Write-Host $($(Test-GitRepository) ? " ($(Get-CurrentGitBranchName 2>$null))":"") -NoNewline -ForegroundColor Red
     return ">"
 }
 
-# function
+# Define functions
 function Which($name) {
     Get-Command $name -ErrorAction SilentlyContinue
     | % { $_.Source.ToString() }
@@ -37,5 +38,15 @@ function EclipseOpenWorkspace {
         return
     }
     Invoke-Expression "eclipse -data ${Path}"
+}
+
+function Test-GitRepository ([string]$Path = ".\") {
+    return $(git -C $Path rev-parse --is-inside-work-tree 2>$null) -eq $true
+}
+
+function Get-CurrentGitBranchName ([string]$Path = ".\") {
+    return $(git -C $Path branch) |
+        Select-String -Pattern '(?<=\*\s).*$' |
+        ForEach-Object { $_.Matches.Value }
 }
 
