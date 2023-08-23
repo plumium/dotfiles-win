@@ -6,3 +6,6 @@
     autocrlf = true
 [init]
     defaultBranch = main
+[user]
+	email = u-u2@outlook.jp
+	name = u-u2
