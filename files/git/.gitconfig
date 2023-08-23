@@ -1,11 +1,12 @@
 [alias]
-    st = status -s
+    bl = branch -a -l -v
     co = checkout
-
+    cp = cherry-pick
+    st = status -s
 [core]
     autocrlf = true
 [init]
     defaultBranch = main
 [user]
-	email = u-u2@outlook.jp
-	name = u-u2
+    email = u-u2@outlook.jp
+    name = u-u2
