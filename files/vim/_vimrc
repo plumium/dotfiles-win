@@ -58,5 +58,4 @@ cnoremap <C-a> <C-b>
 " Autocommands
 autocmd CmdlineEnter * call echoraw(&t_SI)
 autocmd CmdlineLeave * call echoraw(&t_EI)
-autocmd VimEnter * NERDTree
 
