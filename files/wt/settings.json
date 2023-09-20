@@ -1,7 +1,8 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": [
+    "actions": 
+    [
         {
             "command": "openTabRenamer",
             "keys": "ctrl+shift+r"
@@ -11,14 +12,16 @@
             "keys": "ctrl+shift+f"
         },
         {
-            "command": {
+            "command": 
+            {
                 "action": "copy",
                 "singleLine": false
             },
             "keys": "ctrl+shift+insert"
         },
         {
-            "command": {
+            "command": 
+            {
                 "action": "prevTab"
             },
             "keys": "ctrl+pgup"
@@ -40,43 +43,50 @@
             "keys": "alt+f4"
         },
         {
-            "command": {
+            "command": "unbound",
+            "keys": "win+`"
+        },
+        {
+            "command": 
+            {
                 "action": "nextTab"
             },
             "keys": "ctrl+pgdn"
         },
         {
-            "command": {
+            "command": 
+            {
                 "action": "closeTab"
             },
             "keys": "ctrl+shift+w"
-        },
-        {
-            "command": null,
-            "keys": "win+`"
         }
     ],
     "copyFormatting": "none",
     "copyOnSelect": false,
-    "defaultProfile": "{a863c320-524f-4d64-bc2f-914ace0d4db1}",
+    "defaultProfile": "{92bdd1f1-1ace-468f-b99a-b12fbb521713}",
     "language": "en-US",
-    "launchMode": "default",
-    "newTabMenu": [
+    "launchMode": "maximized",
+    "newTabMenu": 
+    [
         {
             "type": "remainingProfiles"
         }
     ],
-    "profiles": {
-        "defaults": {
+    "profiles": 
+    {
+        "defaults": 
+        {
             "colorScheme": "Campbell",
-            "font": {
+            "font": 
+            {
                 "face": "HackGen Console",
                 "size": 12.0
             },
             "opacity": 50,
             "useAcrylic": false
         },
-        "list": [
+        "list": 
+        [
             {
                 "colorScheme": "Campbell",
                 "commandline": "\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\"",
@@ -100,10 +110,20 @@
                 "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
                 "name": "Git-Bash",
                 "startingDirectory": "%USERPROFILE%"
+            },
+            {
+                "colorScheme": "Campbell",
+                "commandline": "C:\\Program Files\\WindowsApps\\CanonicalGroupLimited.Ubuntu22.04LTS_2204.2.47.0_x64__79rhkp1fndgsc\\ubuntu2204.exe",
+                "guid": "{92bdd1f1-1ace-468f-b99a-b12fbb521713}",
+                "hidden": false,
+                "icon": "C:\\Program Files\\WindowsApps\\CanonicalGroupLimited.Ubuntu22.04LTS_2204.2.47.0_x64__79rhkp1fndgsc\\Assets\\Square44x44Logo.altform-unplated_targetsize-16.png",
+                "name": "ubuntu2204",
+                "startingDirectory": "~"
             }
         ]
     },
-    "schemes": [
+    "schemes": 
+    [
         {
             "background": "#0C0C0C",
             "black": "#0C0C0C",
@@ -336,39 +356,46 @@
         }
     ],
     "startOnUserLogin": true,
-    "themes": [
+    "themes": 
+    [
         {
             "name": "legacyDark",
-            "tab": {
+            "tab": 
+            {
                 "background": null,
                 "showCloseButton": "always",
                 "unfocusedBackground": null
             },
-            "window": {
+            "window": 
+            {
                 "applicationTheme": "dark",
                 "useMica": false
             }
         },
         {
             "name": "legacyLight",
-            "tab": {
+            "tab": 
+            {
                 "background": null,
                 "showCloseButton": "always",
                 "unfocusedBackground": null
             },
-            "window": {
+            "window": 
+            {
                 "applicationTheme": "light",
                 "useMica": false
             }
         },
         {
             "name": "legacySystem",
-            "tab": {
+            "tab": 
+            {
                 "background": null,
                 "showCloseButton": "always",
                 "unfocusedBackground": null
             },
-            "window": {
+            "window": 
+            {
                 "applicationTheme": "system",
                 "useMica": false
             }
