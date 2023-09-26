@@ -14,30 +14,25 @@ function Prompt {
 }
 
 # Define functions
-function Which($name) {
-    Get-Command $name -ErrorAction SilentlyContinue
-    | % { $_.Source.ToString() }
-}
-
-function MvnArchetypeGenerate {
+function New-MavenProject {
     [CmdletBinding()]
     param(
-        [parameter(ValueFromPipeline)]$Scope
+        [parameter(ValueFromPipeline)]$Scope = "internal"
     )
     process {
         Invoke-Expression "mvn archetype:generate -DarchetypeCatalog=${scope}"
     }
 }
 
-function EclipseOpenWorkspace {
+function Start-Eclipse {
     param(
-        [parameter(ValueFromPipeline)]$Path
+        [parameter(ValueFromPipeline)]$Path = ".\"
     )
     if (-not(Test-Path "$Path\.metadata")) {
-        Write-Host "workspace not found"
+        Write-Host "Eclipse workspace does not found in $Path"
         return
     }
-    Invoke-Expression "eclipse -data ${Path}"
+    Invoke-Expression "eclipse -data $Path"
 }
 
 function Test-GitRepository ([string]$Path = ".\") {
