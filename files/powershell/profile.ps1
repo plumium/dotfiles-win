@@ -2,6 +2,7 @@
 # alias
 Set-Alias vi 'C:\Program Files\Vim\vim90\vim.exe'
 Set-Alias eclipse 'C:\Program Files\Eclipse Foundation\2023-03-jee\eclipse\eclipse.exe'
+Set-Alias sudo Start-Process-Sudo
 
 Set-PSReadLineOption `
     -PredictionViewStyle ListView `
@@ -35,6 +36,26 @@ function Start-Eclipse {
     Invoke-Expression "eclipse -data $Path"
 }
 
+function Start-Process-Sudo {
+    $cmd = $args[0] 
+    $cmdArgs = [System.Collections.ArrayList]::new($args.Count - 1)
+    foreach ($arg in $args[1..$args.Count]) {
+        switch ($arg[0]) {
+            '-' { $cmdArgs.Add($arg) | Out-Null }
+            Default { $cmdArgs.Add("`"$arg`"") | Out-Null }
+        }
+    }
+    $cmdArgLine = $cmdArgs.Count -eq 0 ? '' : "{$($cmdArgs -join ' ')}"
+    $options = @{
+        FilePath     = 'pwsh.exe'
+        ArgumentList = '-Command', $cmd, $cmdArgLine
+        Verb         = 'RunAs'
+        WindowStyle  = 'Hidden'
+        Wait         = $true
+    }
+    Start-Process @options
+}
+
 function Test-GitRepository ([string]$Path = ".\") {
     return $(git -C $Path rev-parse --is-inside-work-tree 2>$null) -eq $true
 }
@@ -47,10 +68,10 @@ function Get-CurrentGitBranchName ([string]$Path = ".\") {
 
 Register-ArgumentCompleter -Native -CommandName winget -ScriptBlock {
     param(
-            $wordToComplete,
-            $commandAst,
-            $cursorPosition
-         )
+        $wordToComplete,
+        $commandAst,
+        $cursorPosition
+    )
     [Console]::InputEncoding = [Console]::OutputEncoding = $OutputEncoding = [System.Text.Utf8Encoding]::new()
     $Local:word = $wordToComplete.Replace('"', '""')
     $Local:ast = $commandAst.ToString().Replace('"', '""')
