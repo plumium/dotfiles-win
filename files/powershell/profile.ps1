@@ -2,6 +2,7 @@
 # alias
 Set-Alias vi 'C:\Program Files\Vim\vim90\vim.exe'
 Set-Alias eclipse 'C:\Program Files\Eclipse Foundation\2023-03-jee\eclipse\eclipse.exe'
+Set-Alias 7z 'C:\Program Files\7-Zip\7z.exe'
 
 Set-PSReadLineOption `
     -PredictionViewStyle ListView `
@@ -10,6 +11,7 @@ function Prompt {
     Write-Host "${env:USERNAME}@${env:COMPUTERNAME} " -NoNewLine -ForegroundColor Cyan
     Write-Host "$pwd`e[5 q" -NoNewLine -ForegroundColor DarkCyan
     Write-Host $($(Test-GitRepository) ? " ($(Get-CurrentGitBranchName 2>$null))":"") -NoNewline -ForegroundColor Red
+    Write-Host ""
     return ">"
 }
 

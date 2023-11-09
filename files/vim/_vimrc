@@ -41,6 +41,11 @@ set expandtab
 set tabstop=4
 set shiftwidth=0
 
+if has("gui_running")
+    set lines=40
+    set columns=120
+endif
+
 colorscheme codedark
 syntax enable
 
