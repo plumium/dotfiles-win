@@ -7,6 +7,8 @@ Set-Alias 7z 'C:\Program Files\7-Zip\7z.exe'
 Set-PSReadLineOption `
     -PredictionViewStyle ListView `
 
+Get-PSReadLineOption | select -ExpandProperty HistorySavePath | Remove-Item
+
 function Prompt {
     Write-Host "${env:USERNAME}@${env:COMPUTERNAME} " -NoNewLine -ForegroundColor Cyan
     Write-Host "$pwd`e[5 q" -NoNewLine -ForegroundColor DarkCyan
@@ -98,4 +100,3 @@ Register-ArgumentCompleter -Native -CommandName winget -ScriptBlock {
             [System.Management.Automation.CompletionResult]::new($_, $_, 'ParameterValue', $_)
         }
 }
-
