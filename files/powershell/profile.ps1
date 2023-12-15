@@ -45,10 +45,10 @@ function sudo() {
 function du() {
     $folders = Get-ChildItem -Directory -Recurse $args[0]
     $FolderSizes = for ($i = 0; $i -lt $folders.Count; $i++) {
-    $size = (Get-ChildItem -File -Recurse $folders[$i].FullName | Measure-Object Length -Sum).Sum
-    $sizeInMB = $size / 1MB
-    $per = (($i / $folders.Count) * 100).ToString('0') 
-    Write-Progress -Activity "Calc in Progress" -Status "$per% Complete" -PercentComplete $per
+        $size = (Get-ChildItem -File -Recurse $folders[$i].FullName | Measure-Object Length -Sum).Sum
+        $sizeInMB = $size / 1MB
+        $per = (($i / $folders.Count) * 100).ToString('0') 
+        Write-Progress -Activity "Calc in Progress" -Status "$per% Complete" -PercentComplete $per
         [PSCustomObject]@{
             FolderName = $folders[$i].FullName
             SizeInMB   = [Math]::Round($sizeInMB, 2)
