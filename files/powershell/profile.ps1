@@ -7,7 +7,9 @@ Set-Alias 7z 'C:\Program Files\7-Zip\7z.exe'
 Set-PSReadLineOption `
     -PredictionViewStyle ListView `
 
-Get-PSReadLineOption | select -ExpandProperty HistorySavePath | Remove-Item
+Get-PSReadLineOption | 
+    Select-Object -ExpandProperty HistorySavePath | 
+    ForEach-Object { if (Test-Path $_) { Remove-Item $_ } }
 
 function Prompt {
     Write-Host "${env:USERNAME}@${env:COMPUTERNAME} " -NoNewLine -ForegroundColor Cyan
