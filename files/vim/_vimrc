@@ -37,7 +37,7 @@ set wildmenu
 set wildmode=longest,list,full
 
 set expandtab
-set tabstop=4
+set tabstop=2
 set shiftwidth=0
 
 set shell=\"C:\Program\ Files\PowerShell\7\pwsh.exe\"
