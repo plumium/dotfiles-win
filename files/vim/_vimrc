@@ -20,9 +20,7 @@ let &t_EI = "\e[2 q"
 
 " Editor Options
 set encoding=utf-8
-
 set number
-set cursorline
 
 set showcmd
 set showmatch
