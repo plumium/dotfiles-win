@@ -1,6 +1,6 @@
 
 # alias
-Set-Alias vi 'C:\Program Files\Vim\vim90\vim.exe'
+Set-Alias vi 'C:\Program Files\Vim\Vim91\vim.exe'
 Set-Alias eclipse 'C:\Program Files\Eclipse Foundation\2023-03-jee\eclipse\eclipse.exe'
 Set-Alias 7z 'C:\Program Files\7-Zip\7z.exe'
 
