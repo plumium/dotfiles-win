@@ -3,6 +3,7 @@
 Set-Alias vi 'C:\Program Files\Vim\Vim91\vim.exe'
 Set-Alias eclipse 'C:\Program Files\Eclipse Foundation\2023-03-jee\eclipse\eclipse.exe'
 Set-Alias 7z 'C:\Program Files\7-Zip\7z.exe'
+Set-Alias msbuild 'C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\MSBuild.exe'
 
 Set-PSReadLineOption `
     -PredictionViewStyle ListView `

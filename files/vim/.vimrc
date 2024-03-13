@@ -21,6 +21,7 @@ set tabstop=4
 set shiftwidth=0
 
 syntax enable
+set t_Co=256
 
 let &t_SI .= "\<Esc>[5 q"
 let &t_EI .= "\<Esc>[1 q"
