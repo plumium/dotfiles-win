@@ -1,0 +1,14 @@
+<Configuration>
+  <VGpu>Disable</VGpu>
+  <Networking>Enable</Networking>
+  <MappedFolders>
+    <MappedFolder>
+      <HostFolder>../</HostFolder>
+      <SandboxFolder>C:\Users\WDAGUtilityAccount\Documents</SandboxFolder>
+      <ReadOnly>true</ReadOnly>
+    </MappedFolder>
+  </MappedFolders>
+  <LogonCommand>
+    <Command>powershell -ExecutionPolicy Bypass -File Documents\install.ps1</Command>
+  </LogonCommand>
+</Configuration>

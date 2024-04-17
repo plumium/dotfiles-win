@@ -1,0 +1,1 @@
+Start-Process -Verb runas -Wait powershell "-NoProfile -File $PSScriptRoot\scripts\all.ps1"

@@ -1,0 +1,24 @@
+[alias]
+    bra = branch -avv
+    cm = commit
+    co = checkout
+    cp = cherry-pick
+    log5 = log -n 5 --oneline
+    sh = stash
+    ss = status -s
+    st = status
+    tree = log --graph --oneline --decorate=full -20 --date=short --format=\"%C(yellow)%h%C(reset) %C(magenta)[%ad]%C(reset)%C(auto)%d%C(reset) %s %C(cyan)@%an%C(reset)\"
+[core]
+    autocrlf = true
+[init]
+    defaultBranch = main
+[user]
+	email = plumium@outlook.com
+	name = plumium
+[credential "http://192.168.10.154:8080"]
+	provider = generic
+[difftool "sourcetree"]
+	cmd = "'' "
+[mergetool "sourcetree"]
+	cmd = "'' "
+	trustExitCode = true

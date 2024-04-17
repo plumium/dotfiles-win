@@ -1,0 +1,29 @@
+set number
+set cursorline
+set scrolloff=5
+
+set ignorecase
+set hlsearch
+set incsearch
+
+set expandtab
+set tabstop=4
+set shiftwidth=0
+
+nnoremap <silent> <C-[><C-[> :noh<CR>
+nnoremap <silent> <Space>r :reg<CR>
+nnoremap <silent> <Space>m :marks<CR>
+nnoremap <silent> <Space>b :buffers<CR>
+nnoremap <silent> <Space>t :tags<CR>
+nnoremap x "_x
+nnoremap X "_X
+nnoremap s "_s
+nnoremap S "_S
+
+nmap = :vsc Edit.FormatDocument<CR>
+nmap [ :vsc Edit.NextMethod<CR>
+nmap ] :vsc Edit.PreviousMethod<CR>
+nmap <C-F> :vsc AddQuickFile<CR>
+nmap <C-O> :vsc View.NavigateBackward<CR>
+nmap <C-I> :vsc View.NavigateForward<CR>
+nmap <C-]> :vsc Edit.GoToDefinition<CR>

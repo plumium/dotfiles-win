@@ -1,0 +1,26 @@
+set number
+set autoindent
+set hlsearch
+set incsearch
+set tabstop=4
+set shiftwidth=0
+set expandtab
+set contentassistmode
+set startnormalmode
+set imdisable
+
+nmap <C-[><C-[> :noh<CR>
+nnoremap = :format<CR>
+
+
+nnoremap gh :ToggleHover<CR>
+nnoremap gi :OpenImplementation<CR>
+nnoremap ]] :GotoNextMember<CR>
+nnoremap [[ :GotoPreviousMember<CR>
+
+# eclipse actions
+# https://git.eclipse.org/r/plugins/gitiles/jdt/eclipse.jdt.ui/+/89ea2c6596fdcfa355e79600261b224a899708ac/org.eclipse.jdt.ui/ui/org/eclipse/jdt/ui/actions/IJavaEditorActionDefinitionIds.java
+eclipseaction GotoNextMember org.eclipse.jdt.ui.edit.text.java.goto.next.member
+eclipseaction GotoPreviousMember org.eclipse.jdt.ui.edit.text.java.goto.previous.member
+eclipseaction ToggleHover org.eclipse.jdt.ui.edit.text.java.toggle.text.hover
+eclipseaction OpenImplementation org.eclipse.jdt.ui.edit.text.java.open.implementation
