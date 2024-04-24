@@ -7,17 +7,27 @@
     "defaultProfile": "{d30d6a84-a9a0-441a-8da2-94f2375cc9bb}",
     "language": "en-US",
     "launchMode": "maximized",
-    "profiles": {
-        "defaults": {
+    "newTabMenu": 
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
+    "profiles": 
+    {
+        "defaults": 
+        {
             "colorScheme": "Campbell",
-            "font": {
-                "face": "HackGen Console",
+            "font": 
+            {
+                "face": "Consolas",
                 "size": 12.0
             },
             "opacity": 50,
             "useAcrylic": false
         },
-        "list": [
+        "list": 
+        [
             {
                 "commandline": "\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\"",
                 "guid": "{d30d6a84-a9a0-441a-8da2-94f2375cc9bb}",
@@ -28,7 +38,8 @@
             }
         ]
     },
-    "schemes": [
+    "schemes": 
+    [
         {
             "background": "#0C0C0C",
             "black": "#0C0C0C",
