@@ -8,11 +8,11 @@ Set-Alias msbuild 'C:\Program Files\Microsoft Visual Studio\2022\Community\MSBui
 Set-PSReadLineOption -PredictionViewStyle ListView
 
 function Prompt {
-    Write-Host "${env:USERNAME}@${env:COMPUTERNAME} " -NoNewLine -ForegroundColor Cyan
-    Write-Host "$pwd`e[5 q" -NoNewLine -ForegroundColor DarkCyan
+    Write-Host "$pwd`e[5 q" -NoNewLine -ForegroundColor Cyan
     Write-Host " $(Get-GitPrompt)" -NoNewline -ForegroundColor Red
     Write-Host ""
-    return ">"
+    Write-Host ">" -NoNewLine -ForegroundColor Blue
+    return " "
 }
 
 # Define functions
