@@ -9,8 +9,9 @@ call plug#begin()
 Plug 'cocopon/iceberg.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-surround'
-Plug 'obcat/vim-sclow', {'on': []}
+Plug 'tpope/vim-commentary'
 call plug#end()
+
 
 " Terminal Output Codes
 let &t_SI = "\e[6 q"
@@ -41,22 +42,17 @@ set shiftwidth=0
 set shell=\"C:\Program\ Files\PowerShell\7\pwsh.exe\"
 
 set t_Co=256
-if has("gui_running")
-    set lines=40
-    set columns=120
-endif
-
 syntax on
-set t_Co=256
 colorscheme iceberg
 
 " Key Mappings
 nnoremap <silent> <F5> :w<CR>:source $MYVIMRC<CR>
 nnoremap <silent> <C-[><C-[> :noh<CR>
 nnoremap <silent> <Space><Space> :let @/ = '\<' . expand('<cword>') . '\>'<CR>:set hlsearch<CR>
-nnoremap <leader>b :ls<CR>
-nnoremap gb :bn<CR>
-nnoremap gB :bp<CR>
+nnoremap <silent> gl :ls<CR>
+nnoremap <silent> gb :bn<CR>
+nnoremap <silent> gB :bp<CR>
+nnoremap <silent> g= :set lazyredraw<CR>gg=G`'zz:set nolazyredraw<CR>
 nmap <Space>h <Space><Space>:%s/<C-r>///g<Left><Left>
 
 cnoremap <C-a> <C-b>
@@ -64,4 +60,3 @@ cnoremap <C-a> <C-b>
 " Autocommands
 autocmd CmdlineEnter * call echoraw(&t_SI)
 autocmd CmdlineLeave * call echoraw(&t_EI)
-
