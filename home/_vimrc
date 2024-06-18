@@ -1,3 +1,5 @@
+set runtimepath=~/vimfiles,$VIMRUNTIME
+
 " Setup vim-plug https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
 let data_dir = has('nvim') ? stdpath('data') . $HOME.'/site' : $HOME.'/vimfiles'
 if empty(glob(data_dir . '/autoload/plug.vim'))
