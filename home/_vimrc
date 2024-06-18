@@ -22,6 +22,7 @@ let &t_EI = "\e[2 q"
 " Editor Options
 set encoding=utf-8
 set number
+set backspace=indent,eol,start
 
 set showcmd
 set showmatch
@@ -44,6 +45,7 @@ set shiftwidth=0
 set shell=\"C:\Program\ Files\PowerShell\7\pwsh.exe\"
 
 set t_Co=256
+set background=dark
 syntax on
 colorscheme iceberg
 
@@ -55,6 +57,8 @@ nnoremap <silent> gl :ls<CR>
 nnoremap <silent> gb :bn<CR>
 nnoremap <silent> gB :bp<CR>
 nnoremap <silent> g= :set lazyredraw<CR>gg=G`'zz:set nolazyredraw<CR>
+nnoremap <silent> gyy "*yy
+vnoremap <silent> gy "*y
 nmap <Space>h <Space><Space>:%s/<C-r>///g<Left><Left>
 
 cnoremap <C-a> <C-b>
