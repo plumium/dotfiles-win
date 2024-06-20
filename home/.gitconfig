@@ -2,23 +2,25 @@
     bra = branch -avv
     cm = commit
     co = checkout
-    cp = cherry-pick
-    log5 = log -n 5 --oneline
-    sh = stash
-    ss = status -s
+    l = log -n 5 --date=short --pretty=format:\"%C(yellow)%h %C(magenta)%ad%C(auto)%d %s %C(cyan)@%an\"
     st = status
+    sts = status -s
+    stv = status -v
+    stvv = status -v -v
     tree = log --graph --oneline --decorate=full -20 --date=short --format=\"%C(yellow)%h%C(reset) %C(magenta)[%ad]%C(reset)%C(auto)%d%C(reset) %s %C(cyan)@%an%C(reset)\"
 [core]
     autocrlf = true
+    editor = vi
+    whitespace = tab-in-indent
 [init]
     defaultBranch = main
 [user]
-	email = plumium@outlook.com
-	name = plumium
+    email = plumium@outlook.com
+    name = plumium
 [credential "http://192.168.10.154:8080"]
-	provider = generic
-[difftool "sourcetree"]
-	cmd = "'' "
-[mergetool "sourcetree"]
-	cmd = "'' "
-	trustExitCode = true
+    provider = generic
+[filter "lfs"]
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
