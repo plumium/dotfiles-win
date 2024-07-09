@@ -12,21 +12,23 @@ if ((Get-Command -Type Application | Where-Object Name -EQ 'winget.exe').Count -
 
 $ProgressPreference = 'Continue'
 winget source update
-winget install --id Microsoft.PowerShell --version 7.4.2 --source winget 
-winget install --id Git.Git --source winget
-winget install --id vim.vim --source winget
-winget install --id version-fox.vfox --source winget 
-winget install --id 7zip.7zip --source winget
+winget install --id Microsoft.PowerShell --source winget --version 7.4.2
+winget install --id Git.Git --source winget --version 2.45.2
+winget install --id vim.vim --source winget --version 9.1.0514
+winget install --id version-fox.vfox --source winget --version 0.5.4
+winget install --id 7zip.7zip --source winget --version 24.07
+winget install --id alacritty --source winget --version 0.13.2
 
 vfox add python
 vfox add golang
 vfox add java
 vfox add maven
+vfox add gradle
 vfox install python@3.12.0
 vfox install golang@1.22.2
 vfox install java@21.0.2+13
-vfox install java@8.0.342+7
 vfox install maven@3.9.6
+vfox install gradle@8.8
 
 python -m pip install pgcli
 python -m pip install 'psycopg[binary,pool]'

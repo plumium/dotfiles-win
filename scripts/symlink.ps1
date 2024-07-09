@@ -50,7 +50,8 @@ function ProcessDirectory {
 Get-ChildItem $targetRoot | ProcessBegin
 foreach ($item in @(
         @("$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json", "$parent\files\wt\settings.json"),
-        @("$env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1 ", "$parent\files\pwsh\profile.ps1")
+        @("$env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1 ", "$parent\files\pwsh\profile.ps1"),
+        @("$env:APPDATA\alacritty\alacritty.toml", "$parent\files\alacritty\alacritty.toml")
     )) {
     Write-Output "$($item[0]) -> $($item[1])" 
     if (-not $dryRun) {
