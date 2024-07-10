@@ -11,7 +11,7 @@
 [core]
     autocrlf = true
     editor = vi
-    whitespace = tab-in-indent
+    whitespace = cr-at-eol
 [init]
     defaultBranch = main
 [user]
@@ -24,3 +24,5 @@
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
+[diff "sjis"]
+    textconv = iconv -f sjis

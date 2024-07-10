@@ -17,7 +17,7 @@ winget install --id Git.Git --source winget --version 2.45.2
 winget install --id vim.vim --source winget --version 9.1.0514
 winget install --id version-fox.vfox --source winget --version 0.5.4
 winget install --id 7zip.7zip --source winget --version 24.07
-winget install --id alacritty --source winget --version 0.13.2
+winget install --id Alacritty.Alacritty --source winget --version 0.13.2
 
 vfox add python
 vfox add golang
