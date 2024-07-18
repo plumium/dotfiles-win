@@ -19,6 +19,7 @@ Plug 'preservim/vim-markdown'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'sqls-server/sqls.vim'
 call plug#end()
 
 
@@ -198,6 +199,13 @@ if !empty(globpath(&rtp, 'autoload/lsp.vim'))
           \   'name': 'Rust Language Server',
           \   'cmd': {server_info->['rust-analyzer']},
           \   'whitelist': ['rust'],
+          \ })
+  endif
+  if executable('sqls')
+    au User lsp_setup call lsp#register_server({
+          \ 'name': 'sqls',
+          \ 'cmd': {server_info->['sqls']},
+          \ 'allowlist': ['sql'],
           \ })
   endif
   augroup lsp_install
