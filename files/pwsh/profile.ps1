@@ -90,27 +90,8 @@ function Get-GitPrompt([string]$Path = ".") {
     }
 }
 
-Register-ArgumentCompleter -Native -CommandName winget -ScriptBlock {
-    param(
-        $wordToComplete,
-        $commandAst,
-        $cursorPosition
-    )
-    [Console]::InputEncoding = [Console]::OutputEncoding = $OutputEncoding = [System.Text.Utf8Encoding]::new()
-    $Local:word = $wordToComplete.Replace('"', '""')
-    $Local:ast = $commandAst.ToString().Replace('"', '""')
-    winget complete --word="$Local:word" --commandline "$Local:ast" --position $cursorPosition |
-        ForEach-Object {
-            [System.Management.Automation.CompletionResult]::new($_, $_, 'ParameterValue', $_)
-        }
-}
-
-Register-ArgumentCompleter -Native -CommandName vfox -ScriptBlock {
-    param($commandName, $wordToComplete, $cursorPosition)
-    $other = "$wordToComplete --generate-bash-completion"
-    Invoke-Expression $other | ForEach-Object {
-        [System.Management.Automation.CompletionResult]::new($_, $_, 'ParameterValue', $_)
-    }
-}
-
 Invoke-Expression "$(vfox activate pwsh)"
+
+Get-ChildItem "$HOME/.pwsh_completion" |
+  Get-Content -Raw |
+  Invoke-Expression
