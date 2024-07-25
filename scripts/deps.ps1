@@ -18,17 +18,21 @@ winget install --id vim.vim --source winget --version 9.1.0514
 winget install --id version-fox.vfox --source winget --version 0.5.4
 winget install --id 7zip.7zip --source winget --version 24.07
 winget install --id Alacritty.Alacritty --source winget --version 0.13.2
+winget install --id Task.Task --source winget --version 3.37.2
 
 vfox add python
-vfox add golang
-vfox add java
-vfox add maven
-vfox add gradle
 vfox install python@3.12.0
-vfox install golang@1.22.2
-vfox install java@21.0.2+13
-vfox install maven@3.9.6
-vfox install gradle@8.8
-
 python -m pip install pgcli
 python -m pip install 'psycopg[binary,pool]'
+
+vfox add golang
+vfox install golang@1.22.2
+
+vfox add java
+vfox install java@21.0.2+13
+
+vfox add maven
+vfox install maven@3.9.6
+
+vfox add gradle
+vfox install gradle@8.8
