@@ -7,3 +7,9 @@ bindings = [
 { key = "N", mods = "Control|Shift", action = "CreateNewWindow" },
 { key = "W", mods = "Control|Shift", action = "Quit" },
 ]
+
+[window]
+opacity = 0.9
+
+[mouse]
+hide_when_typing = true
